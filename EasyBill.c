@@ -827,18 +827,7 @@ void all()
     fclose(file);
     inventory();
 }
-/*
-function to display in screen
-void display(rec *item,int i,int j)
-{
-    
-    printf("%4d",j);
-    printf("%9s",item->name);
-    printf("%12s",item->code);
-    printf("%14.2f",item->rate);
-    printf("%11d",item->quantity);
-}
-*/
+
 void display(){
 	
 
@@ -1094,7 +1083,7 @@ void display_bill(){
 			time_t t;
 			time(&t);
 			printf("\n\t\t\t\t\t\t\t\t\t\t%s", ctime(&t));
-			printf("\n\t\t\t\t\t\tStore Desceiption");
+			printf("\n\t\t\t\t\t\tStore Description");
 			printf("\nBill No: %d\n", rand());
 	
 
@@ -1130,14 +1119,20 @@ void display_bill(){
 
 	fclose(file);
 
-	puts("\n\n\t\tPress 1 and 2 to generate more bills and display total sales respectively  	:");
+	puts("\n\n\t\tPress 1  to generate more bills  	:");
+	puts("\n\n\t\tPress 2  to Log Out			 	:");
+	puts("\n\n\t\tPress 3  to Terminate the Program  	:");
 	scanf("%d", &m);
 	if (m == 1)
 	{
 		display_bill();
 	}
+	else if(m==2){
+		system("cls");
+		loginChecker();
+	}
 	else
-	getch();
+	exit(1);
 }
 
 void header()
