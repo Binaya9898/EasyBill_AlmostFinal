@@ -7,7 +7,7 @@
 #include <windows.h>
 #include <time.h>
 
- //Defining macros
+//Defining macros
 #define ANS 15
 #define ACS 4
 
@@ -694,7 +694,7 @@ void c_code(char y[]) // char y holds the value entered for item code
         {
             if (strcmp(y,item.code)==0) // Comparing if already used
             {
-                flag=0;// If already used diplaying messgae
+                flag=0;// If already used displaying messgae
                 
                 printf("Code Already Exists"); 
                 
@@ -793,7 +793,7 @@ sleep(1);
 
 
 
-/*function to display all records*/
+//function to display all records
 void all()
 {
 	system("cls");
@@ -901,16 +901,10 @@ void search()
         system("cls");
         printf("No Item Found");
     }
-    sleep(1);
-   printf("\n \nPress");
-   sleep(1);
-   printf(" 1 to");
-   sleep(1);
-    printf(" search more products:"); 
-    sleep(1);
-   printf("\n\nPress 2 for");
-   sleep(1);
-   printf(" main menu:");
+    
+    printf(" Press 1 to search more products:"); 
+    
+   printf("\n\nPress 2 for main menu:");
    scanf("%d",&chh);
    if(chh==1){
    	search();
@@ -1084,6 +1078,7 @@ void display_bill(){
 			time(&t);
 			printf("\n\t\t\t\t\t\t\t\t\t\t%s", ctime(&t));
 			printf("\n\t\t\t\t\t\tStore Description");
+			
 			printf("\nBill No: %d\n", rand());
 	
 
